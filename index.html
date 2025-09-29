@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dulce de Vid — Mermelada de Uva de Mesa</title>
+<meta name="description" content="Dulce de Vid: mermelada artesanal de uva de mesa desde Copiapó. Compra por WhatsApp o correo.">
+<meta name="theme-color" content="#5a8c47">
+<style>
+:root{
+  --ink:#2d4a2b; --muted:#5a8c47; --g1:#ffffff; --g2:#f3fbf3;
+  --accent1:#7fb069; --accent2:#5a8c47; --ring:#a7d7a2;
+  --card:#fff; --shadow:0 6px 22px rgba(0,0,0,.08);
+  --r:16px; --max:1200px
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);
+  background:linear-gradient(135deg,var(--g1),var(--g2));line-height:1.6}
+a{color:inherit}
+
+header{position:fixed;inset:0 0 auto;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.06);z-index:1000}
+nav{max-width:var(--max);margin:0 auto;padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;gap:.8rem}
+.logo{font-weight:800;font-size:1.55rem;background:linear-gradient(135deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav{list-style:none;display:flex;gap:1rem;flex-wrap:wrap}
+.nav a{text-decoration:none;color:var(--ink)}
+.nav a:hover{color:var(--accent1)}
+
+main{max-width:var(--max);margin:0 auto;padding:0 5%}
+.hero{margin-top:86px;padding:3.5rem 0;text-align:center;background:#fff;border-radius:0 0 var(--r) var(--r)}
+.hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:.7rem}
+.hero p{font-size:clamp(1rem,3.2vw,1.2rem);color:var(--muted);margin-bottom:1.3rem}
+.btn{display:inline-block;padding:.9rem 1.4rem;border-radius:999px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;text-decoration:none;font-weight:700;box-shadow:0 10px 26px rgba(127,176,105,.32)}
+
+.section{padding:3.2rem 0}
+.banner{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.banner img{width:100%;height:auto;display:block}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.card .pic{width:100%;height:260px;background:#f8fbf8;display:flex;align-items:center;justify-content:center}
+.card .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.card .body{padding:1rem 1.1rem}
+.price{font-weight:800;color:var(--accent1);font-size:1.2rem}
+
+.panel{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:1.1rem;max-width:980px;margin:0 auto}
+.row{display:grid;gap:1rem;grid-template-columns:1fr 1fr 1fr}
+.row2{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+input,select,textarea{width:100%;padding:.85rem 1rem;border:1px solid #dfe7df;border-radius:12px;font:inherit;outline:none}
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px var(--ring);border-color:var(--accent1)}
+.total{margin-top:.4rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.7rem 1rem;border-radius:12px;border:1px dashed #cfe6cf;background:#f6fbf6;color:var(--accent2);font-weight:800}
+.actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem}
+
+.about{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:1.5rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.about .box{background:linear-gradient(135deg,#f8fef8,#fff);padding:1rem;border-radius:12px;box-shadow:0 5px 18px rgba(0,0,0,.06)}
+.about img{width:100%;height:auto;border-radius:12px;margin-top:.6rem;box-shadow:0 10px 28px rgba(0,0,0,.08)}
+
+.promos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.1rem;max-width:1000px;margin:0 auto}
+.promo img{width:100%;height:auto;display:block}
+.promo .body{padding:1rem 1.1rem}
+
+.conocenos{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:1.5rem}
+.lead{text-align:center;color:var(--muted);margin:.4rem 0 1.2rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.figure{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.07)}
+.figure img{width:100%;height:220px;object-fit:cover;display:block}
+.figcap{padding:.7rem;font-weight:600;color:var(--muted)}
+.subsec{margin-top:1.6rem}
+
+.contact{text-align:center;background:#fff;padding:2.2rem 1rem;border-radius:14px;box-shadow:var(--shadow)}
+footer{background:#2d4a2b;color:#fff;text-align:center;padding:2rem;margin-top:2rem;border-radius:16px 16px 0 0}
+.disclaimer{font-size:.95rem;opacity:.92;margin-top:.45rem}
+
+@media (max-width:900px){
+  .row,.row2{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">🍇 Dulce de Vid</div>
+    <ul class="nav">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#promos">Promociones</a></li>
+      <li><a href="#comprar">Comprar</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#conocenos">Conócenos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <h1>Mermelada Artesanal de Uva de Mesa</h1>
+    <p>Desde Copiapó directo a tu mesa. Natural, suave y deliciosa. 💚</p>
+    <a class="btn" href="#comprar">Comprar ahora</a>
+  </section>
+
+  <!-- BANNER -->
+  <section class="section">
+    <div class="banner"><img src="img/campo.jpg" alt="Viñedos al atardecer"></div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="section">
+    <h2>Nuestras Mermeladas</h2>
+    <div class="grid" style="margin-top:1rem">
+      <article class="card">
+        <div class="pic"><img src="img/prod_400.jpg" alt="Mermelada Dulce de Vid 400 g"></div>
+        <div class="body">
+          <h3>Clásica 400 g</h3>
+          <p>Receta clásica con uva de mesa de Atacama.</p>
+          <div class="price" data-price="5990">$5.990</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="pic"><img src="img/prod_250.jpg" alt="Mermelada Dulce de Vid 250 g"></div>
+        <div class="body">
+          <h3>Clásica 250 g</h3>
+          <p>Formato ideal para probar o regalar.</p>
+          <div class="price" data-price="3990">$3.990</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="pic"><img src="img/prod_sin.jpg" alt="Mermelada Dulce de Vid sin azúcar"></div>
+        <div class="body">
+          <h3>Sin Azúcar</h3>
+          <p>Endulzada naturalmente para cuidar tu consumo.</p>
+          <div class="price" data-price="4490">$4.490</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROMOCIONES -->
+  <section id="promos" class="section">
+    <h2>Promociones</h2>
+    <div class="promos" style="margin-top:1rem">
+      <article class="card promo">
+        <img src="img/promo_vaso.jpg" alt="Pack vaso + 2 mermeladas">
+        <div class="body">
+          <h3>Pack vaso + 2 mermeladas</h3>
+          <p style="color:#3f6f3c;font-weight:800;font-size:1.15rem">$18.990</p>
+          <a class="btn" href="#" onclick="promoWhatsApp(event,'Pack vaso + 2 mermeladas por $18.990')">Quiero esta promo</a>
+        </div>
+      </article>
+      <article class="card promo">
+        <img src="img/promo_duo.jpg" alt="Dúo Dulce de Vid">
+        <div class="body">
+          <h3>Dúo Dulce de Vid</h3>
+          <p style="color:#3f6f3c;font-weight:800;font-size:1.15rem">$10.000</p>
+          <a class="btn" href="#" onclick="promoWhatsApp(event,'Dúo Dulce de Vid por $10.000')">Quiero esta promo</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- COMPRAR -->
+  <section id="comprar" class="section">
+    <h2>Compra en 30 segundos</h2>
+    <div class="panel" style="margin-top:.7rem">
+      <div class="row">
+        <div>
+          <label for="variant">Producto</label>
+          <select id="variant">
+            <optgroup label="Mermeladas">
+              <option value="400">Clásica 400 g</option>
+              <option value="250">Clásica 250 g</option>
+              <option value="250sa">Sin azúcar 250 g</option>
+            </optgroup>
+            <optgroup label="Promociones">
+              <option value="promo_duo">Dúo (2 frascos)</option>
+              <option value="promo_vaso">Vaso + 2 mermeladas</option>
+            </optgroup>
+          </select>
+        </div>
+        <div>
+          <label for="qty">Cantidad</label>
+          <input id="qty" type="number" min="1" value="1">
+        </div>
+        <div>
+          <label for="comuna">Comuna</label>
+          <input id="comuna" type="text" placeholder="Copiapó">
+        </div>
+      </div>
+      <div class="row2">
+        <div>
+          <label for="nombre">Tu nombre</label>
+          <input id="nombre" type="text" placeholder="Tu nombre">
+        </div>
+        <div>
+          <label for="entrega">Entrega</label>
+          <select id="entrega"><option>Retiro</option><option>Delivery</option></select>
+        </div>
+      </div>
+      <label for="notas" style="margin-top:.6rem;display:block;font-weight:700">Notas (opcional)</label>
+      <textarea id="notas" rows="3" placeholder="Ej: horario preferido, sin azúcar, etc."></textarea>
+
+      <div class="total" aria-live="polite">
+        <span>Total estimado</span><strong id="totalText">$ —</strong>
+      </div>
+      <div class="actions">
+        <button class="btn" id="btnWA" type="button">Comprar por WhatsApp</button>
+        <button class="btn" id="btnMail" type="button">Enviar por correo</button>
+      </div>
+      <p style="color:#666;margin-top:.6rem">La confirmación de stock y envío se coordina por WhatsApp o correo.</p>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="section">
+    <h2>Nuestra inspiración</h2>
+    <div class="about" style="margin-top:.7rem">
+      <div class="about-grid">
+        <div class="box">
+          <h3>Visión</h3>
+          <p>Ser una marca local que celebra el sabor auténtico de la uva de mesa de Copiapó, ofreciendo mermeladas simples, ricas y responsables con el entorno.</p>
+          <img src="img/vision.jpg" alt="Uvas en la parra — Visión">
+        </div>
+        <div class="box">
+          <h3>Misión</h3>
+          <p>Elaborar mermeladas con ingredientes honestos y procesos cuidadosos, fomentando envases reutilizables y apoyando productores de la zona.</p>
+          <img src="img/mision.jpg" alt="Cucharada de mermelada — Misión">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGEN INTERMEDIA -->
+  <section class="section">
+    <div class="card" style="padding:0;overflow:hidden">
+      <img src="img/olla.jpg" alt="Olla de cobre">
+    </div>
+  </section>
+
+  <!-- CONÓCENOS -->
+  <section id="conocenos" class="section">
+    <h2>Conócenos</h2>
+    <div class="conocenos" style="margin-top:.7rem">
+      <p class="lead">Un vistazo a nuestro trabajo: desde la <strong>producción</strong> hasta el <strong>producto final</strong>.</p>
+
+      <div class="subsec">
+        <h3>Producción</h3>
+        <div class="gallery" style="margin-top:.5rem">
+          <figure class="figure">
+            <img src="img/produccion_1.jpg" alt="Cocinando la mermelada en olla de cobre">
+            <figcaption class="figcap">Cocción lenta y cuidadosa</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="img/produccion_2.jpg" alt="Selección y traslado de uvas">
+            <figcaption class="figcap">Selección en origen</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="img/produccion_3.jpg" alt="Cosecha en los parrones">
+            <figcaption class="figcap">Cosecha en parrones</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="subsec">
+        <h3>Producto final</h3>
+        <div class="gallery" style="margin-top:.5rem">
+          <figure class="figure">
+            <img src="img/final_1.jpg" alt="Frascos de mermelada en el viñedo">
+            <figcaption class="figcap">Sabor con identidad local</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="img/final_2.jpg" alt="Mermelada servida en picnic">
+            <figcaption class="figcap">Momentos dulces al aire libre</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="img/final_3.jpg" alt="Pan, queso y mermelada de uva">
+            <figcaption class="figcap">Acompaña panes y quesos</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contact">
+    <h2>Contacto</h2>
+    <p>
+      📞 <a href="https://wa.me/56966701212">+56 9 6670 1212</a> ·
+      📧 <a href="mailto:Dulcedevid@gmail.com">Dulcedevid@gmail.com</a> ·
+      📸 <a href="https://instagram.com/dulce_de_vid" target="_blank" rel="noopener">@dulce_de_vid</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Dulce de Vid — Copiapó, Chile</p>
+  <p class="disclaimer">Este sitio es <strong>solo para el stand de la Universidad INACAP</strong>, carrera de <strong>Administración de Empresas</strong>. ¡Muchas gracias por visitarnos! ❤️🍇</p>
+</footer>
+
+<script>
+const phoneNumber = "56966701212";
+const emailTo = "Dulcedevid@gmail.com";
+const catalog = { "250":3990, "400":5990, "250sa":4490, "promo_duo":10000, "promo_vaso":18990 };
+
+const $ = s => document.querySelector(s);
+const variantEl = $('#variant'), qtyEl = $('#qty'), totalText = $('#totalText');
+const nombreEl = $('#nombre'), comunaEl = $('#comuna'), entregaEl = $('#entrega'), notasEl = $('#notas');
+$('#year').textContent = new Date().getFullYear();
+
+function money(n){ try{return n.toLocaleString('es-CL',{style:'currency',currency:'CLP',maximumFractionDigits:0})}catch(e){return '$'+(Math.round(n)+'').replace(/\B(?=(\d{3})+(?!\d))/g,'.')} }
+function calc(){ const v=variantEl.value, q=Math.max(1,parseInt(qtyEl.value||'1',10)); const p=catalog[v]||0; totalText.textContent = p? money(p*q) : '—'; return {v,q,p,total:p*q}; }
+function orderText(){
+  const map={'400':'Clásica 400 g','250':'Clásica 250 g','250sa':'Sin azúcar 250 g','promo_duo':'PROMO Dúo (2 frascos)','promo_vaso':'PROMO Vaso + 2 mermeladas'};
+  const t = calc();
+  const name=(nombreEl.value||'').trim()||'(sin nombre)';
+  const comuna=(comunaEl.value||'').trim()||'(sin comuna)';
+  const notas=(notasEl.value||'').trim();
+  let txt=`Hola, quiero comprar *Dulce de Vid*.
+Producto: ${map[t.v]||t.v}
+Cantidad: ${t.q}
+Total estimado: ${t.p?money(t.total):'a confirmar'}
+Nombre: ${name}
+Comuna: ${comuna}
+Entrega: ${entregaEl.value}`;
+  if(notas) txt+=`\nNotas: ${notas}`;
+  return txt;
+}
+function openWA(){ const url=`https://wa.me/${phoneNumber}?text=${encodeURIComponent(orderText())}`; window.open(url,'_blank','noopener'); }
+function openMail(){ const subject='Pedido Dulce de Vid — Sitio web'; const body=orderText(); window.location.href=`mailto:${emailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; }
+function promoWhatsApp(e,label){ e.preventDefault(); const url=`https://wa.me/${phoneNumber}?text=${encodeURIComponent(label)}`; window.open(url,'_blank','noopener'); }
+
+variantEl.addEventListener('change',calc); qtyEl.addEventListener('input',calc);
+$('#btnWA').addEventListener('click',openWA); $('#btnMail').addEventListener('click',openMail);
+calc();
+</script>
+</body>
+</html>
