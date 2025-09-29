@@ -4,34 +4,48 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dulce de Vid — Mermelada de Uva</title>
-<meta name="description" content="Mermelada artesanal de uva de mesa hecha en Copiapó, Atacama." />
+<meta name="description" content="Dulce de Vid: mermelada artesanal de uva de mesa hecha en Copiapó, Atacama. Compra fácil por WhatsApp o correo." />
 <meta name="theme-color" content="#5a8c47" />
 <link rel="preload" href="img/campo.jpg" as="image">
 <style>
-:root{--ink:#2d4a2b;--muted:#5a8c47;--g1:#fff;--g2:#f0f8f0;--accent1:#7fb069;--accent2:#5a8c47;--ring:#a7d7a2;--card:#fff;--shadow:0 6px 24px rgba(0,0,0,.08);--radius:16px;--maxw:1200px}
+:root{
+  --ink:#2d4a2b; --muted:#5a8c47; --g1:#ffffff; --g2:#f3fbf3;
+  --accent1:#7fb069; --accent2:#5a8c47; --ring:#a7d7a2;
+  --card:#fff; --shadow:0 6px 24px rgba(0,0,0,.08);
+  --radius:16px; --maxw:1200px
+}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:linear-gradient(135deg,var(--g1) 0%,var(--g2) 100%);line-height:1.6}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);
+  background:linear-gradient(135deg,var(--g1),var(--g2));line-height:1.6}
 header{position:fixed;inset:0 0 auto;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);z-index:1000}
 nav{max-width:var(--maxw);margin:0 auto;padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.logo{font-weight:800;font-size:1.6rem;background:linear-gradient(135deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:flex;align-items:center;gap:.5rem}
+.logo{font-weight:800;font-size:1.6rem;background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;display:flex;align-items:center;gap:.5rem}
 .nav-links{list-style:none;display:flex;gap:1.2rem;flex-wrap:wrap}
-.nav-links a{color:var(--ink);text-decoration:none;font-size:1rem}
+.nav-links a{color:var(--ink);text-decoration:none}
 .nav-links a:hover{color:var(--accent1)}
 main{max-width:var(--maxw);margin:0 auto;padding:0 5%}
+
+/* Hero */
 .hero{margin-top:88px;padding:4rem 0;text-align:center;background:#fff;border-radius:0 0 var(--radius) var(--radius)}
 .hero h1{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:1rem}
 .hero p{font-size:clamp(1rem,3.5vw,1.25rem);color:var(--muted);margin-bottom:1.6rem}
-.btn{display:inline-block;padding:1rem 2rem;border-radius:999px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;text-decoration:none;font-weight:700;box-shadow:0 10px 25px rgba(127,176,105,.3)}
+.btn{display:inline-block;padding:1rem 2rem;border-radius:999px;background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:#fff;text-decoration:none;font-weight:700;box-shadow:0 10px 25px rgba(127,176,105,.3)}
 .section{padding:4rem 0}
-.banner{padding:0;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.08);background:#fff;margin-top:1.5rem}
+.banner{padding:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:#fff;margin-top:1.5rem}
 .banner img{width:100%;height:auto;display:block}
+
+/* Productos */
 .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
 .card{background:var(--card);border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.08)}
 .product-image{width:100%;height:280px;background:#f7fbf7;display:flex;align-items:center;justify-content:center}
 .product-image img{width:100%;height:100%;object-fit:cover;display:block}
 .product-info{padding:1.1rem 1.25rem}
 .price{font-size:1.3rem;color:var(--accent1);font-weight:800}
+
+/* Comprar */
 .buy{background:#fff;border-radius:15px;box-shadow:var(--shadow);padding:1.2rem;max-width:900px;margin:0 auto}
 .buy .row{display:grid;gap:1rem;grid-template-columns:1fr 1fr 1fr}
 .buy .row-2{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
@@ -39,18 +53,37 @@ main{max-width:var(--maxw);margin:0 auto;padding:0 5%}
 .buy input:focus,.buy select:focus,.buy textarea:focus{box-shadow:0 0 0 3px var(--ring);border-color:var(--accent1)}
 .total{margin-top:.5rem;display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.8rem 1rem;border-radius:12px;border:1px dashed #cfe6cf;background:#f6fbf6;color:var(--accent2);font-weight:800}
 .actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:.7rem}
+
+/* Nosotros */
 .about{background:#fff;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.05);padding:2rem;margin-top:1.5rem}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
 .vision,.mision{background:linear-gradient(135deg,#f8fef8 0%,#ffffff 100%);padding:1.4rem;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.05)}
 .vision img,.mision img{width:100%;height:auto;border-radius:12px;margin-top:.8rem;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+
+/* Promos */
 .promos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;max-width:1000px;margin:0 auto}
 .promo-card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.08)}
 .promo-card img{width:100%;height:auto;display:block}
 .promo-card .pbody{padding:1rem 1.25rem}
+
+/* Conócenos */
+.conocenos { background:#fff; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,.06); padding:2rem; }
+.conocenos h2 { text-align:center; margin-bottom:1rem; }
+.conocenos p.lead { text-align:center; color:var(--muted); margin-bottom:2rem; }
+.subsection { margin-top:1.5rem; }
+.subsection h3 { margin-bottom:.5rem; }
+.gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; }
+.figure { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,.07); }
+.figure img { width:100%; height:220px; object-fit:cover; display:block; }
+.figcap { padding:.75rem; font-weight:600; color:var(--muted); }
+
 .contact{text-align:center;background:#fff;padding:3rem 1rem;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.05)}
 footer{background:#2d4a2b;color:#fff;text-align:center;padding:2rem;margin-top:2rem;border-radius:16px 16px 0 0}
 .disclaimer{font-size:.95rem;opacity:.9;margin-top:.5rem}
-@media (max-width:900px){.buy .row,.buy .row-2{grid-template-columns:1fr} .about-grid{grid-template-columns:1fr}}
+@media (max-width:900px){
+  .buy .row,.buy .row-2{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -63,52 +96,78 @@ footer{background:#2d4a2b;color:#fff;text-align:center;padding:2rem;margin-top:2
       <li><a href="#promos">Promociones</a></li>
       <li><a href="#comprar">Comprar</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#conocenos">Conócenos</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
+  <!-- Hero -->
   <section class="hero" id="inicio">
     <h1>Dulce de Vid — Mermelada Artesanal de Uva de Mesa</h1>
     <p>Desde los viñedos de Copiapó directo a tu mesa. Natural, suave y deliciosa.</p>
     <a class="btn" href="#comprar">Comprar ahora</a>
   </section>
 
+  <!-- Banner -->
   <section class="section banner"><img src="img/campo.jpg" alt="Viñedos de Atacama"></section>
 
+  <!-- Productos -->
   <section class="section" id="productos">
     <h2>Nuestras Mermeladas</h2>
     <div class="product-grid">
       <article class="card">
-        <div class="product-image"><img src="img/prod_400.jpg" alt="Dulce de Vid 400 g"></div>
-        <div class="product-info"><h3>Clásica 400 g</h3><p>Receta clásica con uva de mesa de Atacama.</p><div class="price" data-price="5990">$5,990</div></div>
+        <div class="product-image"><img src="img/prod_400.jpg" alt="Dulce de Vid 400 g — Mermelada de uva"></div>
+        <div class="product-info">
+          <h3>Clásica 400 g</h3>
+          <p>Receta clásica con uva de mesa de Atacama.</p>
+          <div class="price" data-price="5990">$5.990</div>
+        </div>
       </article>
       <article class="card">
-        <div class="product-image"><img src="img/prod_250.jpg" alt="Dulce de Vid 250 g"></div>
-        <div class="product-info"><h3>Clásica 250 g</h3><p>Formato ideal para probar o regalar.</p><div class="price" data-price="3990">$3,990</div></div>
+        <div class="product-image"><img src="img/prod_250.jpg" alt="Dulce de Vid 250 g — Mermelada de uva"></div>
+        <div class="product-info">
+          <h3>Clásica 250 g</h3>
+          <p>Formato ideal para probar o regalar.</p>
+          <div class="price" data-price="3990">$3.990</div>
+        </div>
       </article>
       <article class="card">
-        <div class="product-image"><img src="img/prod_sin.jpg" alt="Dulce de Vid Sin Azúcar"></div>
-        <div class="product-info"><h3>Sin Azúcar</h3><p>Endulzada naturalmente para cuidar tu consumo.</p><div class="price" data-price="4490">$4,490</div></div>
+        <div class="product-image"><img src="img/prod_sin.jpg" alt="Dulce de Vid Sin Azúcar — Mermelada de uva"></div>
+        <div class="product-info">
+          <h3>Sin Azúcar</h3>
+          <p>Endulzada naturalmente para cuidar tu consumo.</p>
+          <div class="price" data-price="4490">$4.490</div>
+        </div>
       </article>
     </div>
   </section>
 
+  <!-- Promociones -->
   <section class="section" id="promos">
     <h2>Promociones</h2>
     <div class="promos-grid">
       <article class="promo-card">
         <img src="img/promo_vaso.jpg" alt="Pack vaso + 2 mermeladas">
-        <div class="pbody"><h3>Pack vaso + 2 mermeladas</h3><p style="color:#3f6f3c;font-weight:800;font-size:1.2rem">$18.990</p><a class="btn" href="#" onclick="promoWhatsApp(event, 'Pack vaso + 2 mermeladas por $18.990')">Quiero esta promo</a></div>
+        <div class="pbody">
+          <h3>Pack vaso + 2 mermeladas</h3>
+          <p style="color:#3f6f3c;font-weight:800;font-size:1.2rem">$18.990</p>
+          <a class="btn" href="#" onclick="promoWhatsApp(event, 'Pack vaso + 2 mermeladas por $18.990')">Quiero esta promo</a>
+        </div>
       </article>
       <article class="promo-card">
         <img src="img/promo_duo.jpg" alt="Dúo Dulce de Vid">
-        <div class="pbody"><h3>Dúo Dulce de Vid</h3><p style="color:#3f6f3c;font-weight:800;font-size:1.2rem">$10.000</p><a class="btn" href="#" onclick="promoWhatsApp(event, 'Dúo Dulce de Vid por $10.000')">Quiero esta promo</a></div>
+        <div class="pbody">
+          <h3>Dúo Dulce de Vid</h3>
+          <p style="color:#3f6f3c;font-weight:800;font-size:1.2rem">$10.000</p>
+          <a class="btn" href="#" onclick="promoWhatsApp(event, 'Dúo Dulce de Vid por $10.000')">Quiero esta promo</a>
+        </div>
       </article>
     </div>
   </section>
 
+  <!-- Comprar -->
   <section class="section" id="comprar">
     <h2>Compra en 30 segundos</h2>
     <div class="buy">
@@ -127,8 +186,14 @@ footer{background:#2d4a2b;color:#fff;text-align:center;padding:2rem;margin-top:2
             </optgroup>
           </select>
         </div>
-        <div><label for="qty">Cantidad</label><input id="qty" type="number" min="1" value="1"></div>
-        <div><label for="comuna">Comuna</label><input id="comuna" type="text" placeholder="Copiapó"></div>
+        <div>
+          <label for="qty">Cantidad</label>
+          <input id="qty" type="number" min="1" value="1">
+        </div>
+        <div>
+          <label for="comuna">Comuna</label>
+          <input id="comuna" type="text" placeholder="Copiapó">
+        </div>
       </div>
       <div class="row-2" style="margin-top:.6rem">
         <div><label for="nombre">Tu nombre</label><input id="nombre" type="text" placeholder="Tu nombre"></div>
@@ -136,12 +201,17 @@ footer{background:#2d4a2b;color:#fff;text-align:center;padding:2rem;margin-top:2
       </div>
       <label for="notas" style="margin-top:.6rem;display:block;font-weight:700">Notas (opcional)</label>
       <textarea id="notas" rows="3" placeholder="Ej: horario preferido, sin azúcar, etc."></textarea>
+
       <div class="total" aria-live="polite"><span>Total estimado</span><strong id="totalText">$ —</strong></div>
-      <div class="actions"><button class="btn" id="btnWA">Comprar por WhatsApp</button><button class="btn secondary" id="btnMail">Enviar por correo</button></div>
+      <div class="actions">
+        <button class="btn" id="btnWA">Comprar por WhatsApp</button>
+        <button class="btn" id="btnMail">Enviar por correo</button>
+      </div>
       <p style="color:#666;margin-top:.6rem">La confirmación de stock y envío se coordina por WhatsApp o correo.</p>
     </div>
   </section>
 
+  <!-- Nosotros -->
   <section class="section" id="nosotros">
     <h2>Nuestra inspiración</h2>
     <div class="about">
@@ -160,11 +230,63 @@ footer{background:#2d4a2b;color:#fff;text-align:center;padding:2rem;margin-top:2
     </div>
   </section>
 
+  <!-- Imagen intermedia -->
   <section class="section"><div class="card" style="padding:0;overflow:hidden"><img src="img/olla.jpg" alt="Olla de cobre" style="width:100%;height:auto;display:block"></div></section>
 
+  <!-- Conócenos -->
+  <section class="section" id="conocenos">
+    <div class="conocenos">
+      <h2>Conócenos</h2>
+      <p class="lead">Un vistazo a nuestro trabajo: desde la <strong>producción</strong> hasta el <strong>producto final</strong>.</p>
+
+      <div class="subsection">
+        <h3>Producción</h3>
+        <div class="gallery">
+          <figure class="figure">
+            <img src="img/produccion_1.jpg" alt="Cocinando la mermelada en olla de cobre">
+            <figcaption class="figcap">Cocción lenta y cuidadosa</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="img/produccion_2.jpg" alt="Selección y traslado de uvas">
+            <figcaption class="figcap">Selección de uvas en origen</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="img/produccion_3.jpg" alt="Cosecha en los parrones">
+            <figcaption class="figcap">Cosecha en parrones de Copiapó</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="subsection" style="margin-top:2rem">
+        <h3>Producto final</h3>
+        <div class="gallery">
+          <figure class="figure">
+            <img src="img/final_1.jpg" alt="Frascos de mermelada en el viñedo">
+            <figcaption class="figcap">Sabor con identidad local</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="img/final_2.jpg" alt="Mermelada servida en picnic">
+            <figcaption class="figcap">Momentos dulces al aire libre</figcaption>
+          </figure>
+          <!-- Opcional: agrega este bloque si subes final_3.jpg
+          <figure class="figure">
+            <img src="img/final_3.jpg" alt="Pan, queso y mermelada de uva">
+            <figcaption class="figcap">Acompaña panes y quesos</figcaption>
+          </figure>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
   <section class="section contact" id="contacto">
     <h2>Contacto</h2>
-    <p>📞 <a href="https://wa.me/56966701212">+56 9 6670 1212</a> · 📧 <a href="mailto:Dulcedevid@gmail.com">Dulcedevid@gmail.com</a> · 📸 <a href="https://instagram.com/dulce_de_vid">@dulce_de_vid</a></p>
+    <p>
+      📞 <a href="https://wa.me/56966701212">+56 9 6670 1212</a> ·
+      📧 <a href="mailto:Dulcedevid@gmail.com">Dulcedevid@gmail.com</a> ·
+      📸 <a href="https://instagram.com/dulce_de_vid" target="_blank">@dulce_de_vid</a>
+    </p>
   </section>
 </main>
 
@@ -177,35 +299,59 @@ footer{background:#2d4a2b;color:#fff;text-align:center;padding:2rem;margin-top:2
 <script>
 const phoneNumber = "56966701212";
 const emailTo = "Dulcedevid@gmail.com";
-const catalog = { "250": 3990, "400": 5990, "250sa": 4490, "promo_duo": 10000, "promo_vaso": 18990 };
+const catalog = { "250":3990, "400":5990, "250sa":4490, "promo_duo":10000, "promo_vaso":18990 };
+
 const variantEl = document.querySelector('#variant');
 const qtyEl = document.querySelector('#qty');
-const comunaEl = document.querySelector('#comuna');
+const totalText = document.querySelector('#totalText');
 const nombreEl = document.querySelector('#nombre');
+const comunaEl = document.querySelector('#comuna');
 const entregaEl = document.querySelector('#entrega');
 const notasEl = document.querySelector('#notas');
-const totalText = document.querySelector('#totalText');
 const btnWA = document.querySelector('#btnWA');
 const btnMail = document.querySelector('#btnMail');
-function money(n){ try{ return n.toLocaleString('es-CL',{ style:'currency', currency:'CLP', maximumFractionDigits:0 }); }catch{ return '$ ' + (Math.round(n)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); } }
-function calcTotal(){ const v = variantEl.value; const q = Math.max(1, parseInt(qtyEl.value || '1', 10)); const price = catalog[v] || 0; const total = price * q; totalText.textContent = price ? money(total) : '—'; return { v, q, price, total }; }
-function buildOrderText(){ 
-  const map = { '400':'Clásica 400 g', '250':'Clásica 250 g', '250sa':'Sin azúcar 250 g', 'promo_duo':'PROMO Dúo (2 frascos)', 'promo_vaso':'PROMO Vaso + 2 mermeladas' }; 
-  const { v, q, price, total } = calcTotal(); 
-  const size = map[v] || v; 
-  const name = (nombreEl.value || '').trim() || '(sin nombre)'; 
-  const comuna = (comunaEl.value || '').trim() || '(sin comuna)'; 
-  const entrega = entregaEl.value; 
-  const notas = (notasEl.value || '').trim(); 
-  let txt = `Hola, quiero comprar *Dulce de Vid*.\nProducto: ${size}\nCantidad: ${q}\nTotal estimado: ${price ? money(total) : 'a confirmar'}\nNombre: ${name}\nComuna: ${comuna}\nEntrega: ${entrega}`; 
-  if(notas) txt += `\nNotas: ${notas}`; 
-  return txt; 
+
+function money(n){
+  try { return n.toLocaleString('es-CL',{style:'currency',currency:'CLP',maximumFractionDigits:0}); }
+  catch { return '$ ' + (Math.round(n)).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.'); }
 }
-function openWhatsApp(){ const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(buildOrderText())}`; window.open(url, '_blank', 'noopener'); }
-function openMail(){ const subject = 'Pedido Dulce de Vid — Sitio web'; const body = buildOrderText(); const to = emailTo || ''; const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; window.location.href = mailto; }
-function promoWhatsApp(e, label){ e.preventDefault(); const text = label || 'Hola, quiero una promoción.'; const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`; window.open(url, '_blank', 'noopener'); }
+function calcTotal(){
+  const v = variantEl.value;
+  const q = Math.max(1, parseInt(qtyEl.value || '1',10));
+  const price = catalog[v] || 0;
+  const total = price * q;
+  totalText.textContent = price ? money(total) : '—';
+  return {v,q,price,total};
+}
+function buildOrderText(){
+  const map = {'400':'Clásica 400 g','250':'Clásica 250 g','250sa':'Sin azúcar 250 g','promo_duo':'PROMO Dúo (2 frascos)','promo_vaso':'PROMO Vaso + 2 mermeladas'};
+  const {v,q,price,total} = calcTotal();
+  const size = map[v] || v;
+  const name = (nombreEl.value||'').trim() || '(sin nombre)';
+  const comuna = (comunaEl.value||'').trim() || '(sin comuna)';
+  const entrega = entregaEl.value;
+  const notas = (notasEl.value||'').trim();
+  let txt = `Hola, quiero comprar *Dulce de Vid*.
+Producto: ${size}
+Cantidad: ${q}
+Total estimado: ${price?money(total):'a confirmar'}
+Nombre: ${name}
+Comuna: ${comuna}
+Entrega: ${entrega}`;
+  if(notas) txt += `\nNotas: ${notas}`;
+  return txt;
+}
+function openWhatsApp(){ const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(buildOrderText())}`; window.open(url,'_blank','noopener'); }
+function openMail(){ const subject='Pedido Dulce de Vid — Sitio web'; const body=buildOrderText(); window.location.href=`mailto:${emailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; }
+function promoWhatsApp(e,label){ e.preventDefault(); const url=`https://wa.me/${phoneNumber}?text=${encodeURIComponent(label)}`; window.open(url,'_blank','noopener'); }
+
 document.getElementById('year').textContent = new Date().getFullYear();
-variantEl.addEventListener('change', calcTotal); qtyEl.addEventListener('input', calcTotal); btnWA.addEventListener('click', openWhatsApp); btnMail.addEventListener('click', openMail); calcTotal();
+variantEl?.addEventListener('change', calcTotal);
+qtyEl?.addEventListener('input', calcTotal);
+btnWA?.addEventListener('click', openWhatsApp);
+btnMail?.addEventListener('click', openMail);
+calcTotal();
 </script>
 </body>
 </html>
+
